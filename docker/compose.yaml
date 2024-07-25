@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres:latest
+    shm_size: 512m
+    ports:
+       - 5432:5432 
+    environment:
+        POSTGRES_PASSWORD: test123
+  adminer:
+    image: adminer
+    ports: 
+       - 8080:8080
+    
